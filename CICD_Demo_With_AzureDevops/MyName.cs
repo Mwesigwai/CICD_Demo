@@ -10,7 +10,7 @@ namespace CICD_Demo_With_AzureDevops
     {
         public string PrintMyName()
         {
-            return "Isaasc";
+            return "Isaac";
         }
     }
 }
