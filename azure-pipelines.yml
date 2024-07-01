@@ -1,0 +1,25 @@
+trigger:
+- main
+
+pool:
+  name: 'local-pool' 
+  demands:
+  - dotnet
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- script: dotnet restore
+  displayName: 'Restore dependencies'
+
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'Build project'
+
+- script: dotnet test 
+  displayName: 'Run tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/*.trx'
+    failTaskOnFailedTests: true
