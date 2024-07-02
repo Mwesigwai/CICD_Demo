@@ -8,7 +8,7 @@ namespace CICD_Demo_With_AzureDevops
 {
     public class MyName
     {
-        public string PrintMyName()
+        public string GetMyName()
         {
             return "Isaac";
         }

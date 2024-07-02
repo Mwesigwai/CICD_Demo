@@ -6,11 +6,11 @@ namespace TestDemo
     public class UnitTest1
     {
         [Fact]
-        public void Program_cs_PrintMyName_returns_Isaac()
+        public void MyName_PrintMyName_returns_Isaac()
         {
             var name = "Isaac";
             var myname = new MyName();
-            var resultName = myname.PrintMyName();
+            var resultName = myname.GetMyName();
             Assert.Equal(name, resultName);
         }
     }
